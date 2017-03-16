@@ -15,6 +15,10 @@ class AppServiceProvider extends ServiceProvider
     {
         //require_once('boot.php');
         $this->registerEducationRepository();  
+        $this->registerExperienceRepository();
+        $this->registerSkillRepository();
+        $this->registerPortfolioRepository();
+        $this->registerAboutRepository();
     }
 
     /**
@@ -31,6 +35,34 @@ class AppServiceProvider extends ServiceProvider
 		return $this->app->bind(
 			'App\\Repositories\\Education\\EducationRepository',
 			'App\\Repositories\\Education\\EloquentEducation'
+		);
+	}
+
+	public function registerExperienceRepository() {
+		return $this->app->bind(
+			'App\\Repositories\\Experience\\ExperienceRepository',
+			'App\\Repositories\\Experience\\EloquentExperience'
+		);
+	}
+
+	public function registerSkillRepository() {
+		return $this->app->bind(
+			'App\\Repositories\\Skill\\SkillRepository',
+			'App\\Repositories\\Skill\\EloquentSkill'
+		);
+	}
+
+	public function registerPortfolioRepository() {
+		return $this->app->bind(
+			'App\\Repositories\\Portfolio\\PortfolioRepository',
+			'App\\Repositories\\Portfolio\\EloquentPortfolio'
+		);
+	}
+
+	public function registerAboutRepository() {
+		return $this->app->bind(
+			'App\\Repositories\\About\\AboutRepository',
+			'App\\Repositories\\About\\EloquentAbout'
 		);
 	}
 }
