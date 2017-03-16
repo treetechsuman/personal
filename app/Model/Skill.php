@@ -10,6 +10,7 @@ class Skill extends Model{
 				'title',
 				'value',
 				'type',
+				'display_order',
 				'status',
 			];
 	protected $hidden=[

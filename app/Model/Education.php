@@ -13,6 +13,7 @@ class Education extends Model{
 				'start',
 				'end',
 				'description',
+				'display_order',
 				'status',
 			];
 	protected $hidden=[

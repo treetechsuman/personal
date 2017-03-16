@@ -22,6 +22,7 @@
 								<th>Description</th>
 								<th>From</th>
 								<th>To</th>
+								<th>Display Order</th>
 								<th>Status</th>
 								<th>Action</th>
 							</tr>
@@ -34,6 +35,7 @@
 								<td>{{$experience['description']}}</td>
 								<td>{{$experience['from']}}</td>
 								<td>{{$experience['to']}}</td>
+								<td>{{$experience['display_order']}}</td>
 								<td>{{$experience['status']}}</td>
 								<td>
 									<a href="{{url('admin/experience/'.$experience['id'].'/edit')}}" data-toggle="tooltip" title="Edit" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-edit"></i></a>

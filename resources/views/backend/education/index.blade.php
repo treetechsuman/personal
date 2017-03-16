@@ -23,6 +23,7 @@
 								<th>Start</th>
 								<th>End</th>
 								<th>Descritption</th>
+								<th>Display Order</th>
 								<th>Status</th>
 								<th>Action</th>
 							</tr>
@@ -36,6 +37,7 @@
 								<td>{{$education['start']}}</td>
 								<td>{{$education['end']}}</td>
 								<td>{{$education['description']}}</td>
+								<td>{{$education['display_order']}}</td>
 								<td>{{$education['status']}}</td>
 								<td>
 									<a href="{{url('admin/education/'.$education['id'].'/edit')}}" data-toggle="tooltip" title="Edit" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-edit"></i></a>

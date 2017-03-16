@@ -21,6 +21,7 @@
 								<th>Title</th>
 								<th>Description</th>
 								<th>Url</th>
+								<th>Display Order</th>
 								<th>Status</th>
 								<th>Action</th>
 							</tr>
@@ -28,10 +29,11 @@
 						<tbody>
 							@foreach($portfolios as $portfolio)
 							<tr>
-								<td>{{$portfolio['image']}}</td>
+								<td><img src="{{asset($portfolio['image'])}}" height="100" width="100"></td>
 								<td>{{$portfolio['title']}}</td>
 								<td>{{$portfolio['description']}}</td>
 								<td>{{$portfolio['url']}}</td>
+								<td>{{$portfolio['display_order']}}</td>
 								<td>{{$portfolio['status']}}</td>
 								<td>
 									<a href="{{url('admin/portfolio/'.$portfolio['id'].'/edit')}}" data-toggle="tooltip" title="Edit" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-edit"></i></a>

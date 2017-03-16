@@ -17,6 +17,7 @@ class CreatePortfoliosTable extends Migration {
 			$table->string('description');
 			$table->string('image');
 			$table->string('url');
+			$table->integer('display_order');
 			$table->enum('status',['active','inactive']);
 			$table->timestamps();
 		});

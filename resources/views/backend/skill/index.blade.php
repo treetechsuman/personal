@@ -20,6 +20,7 @@
 								<th>Title</th>
 								<th>Value</th>
 								<th>Skill Type</th>
+								<th>Display Order</th>
 								<th>Status</th>
 								<th>Action</th>
 							</tr>
@@ -30,6 +31,7 @@
 								<td>{{$skill['title']}}</td>
 								<td>{{$skill['value']}}</td>
 								<td>{{$skill['type']}}</td>
+								<td>{{$skill['display_order']}}</td>
 								<td>{{$skill['status']}}</td>
 								<td>
 									<a href="{{url('admin/skill/'.$skill['id'].'/edit')}}" data-toggle="tooltip" title="Edit" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-edit"></i></a>

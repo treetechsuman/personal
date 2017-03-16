@@ -10,7 +10,7 @@ class EloquentSkill implements SkillRepository{
 		$this->skill = $skill;
 	}
 	public function getAllSkill(){
-		return $this->skill->all();
+		return $this->skill->all()->sortBy('display_order');
 	}
 
 	public function getSkillById($id){
@@ -27,6 +27,10 @@ class EloquentSkill implements SkillRepository{
 
 	public function deleteSkill($id){
 		return $this->skill->findorfail($id)->delete();
+	}
+
+	public function getSkillByType($type){
+		return $this->skill->where('type',$type)->orderBy('display_order','asc')->get();
 	}
 
 }

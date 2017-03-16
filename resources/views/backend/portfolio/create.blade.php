@@ -18,10 +18,10 @@
 						{!! csrf_field() !!}
 						<div class="form-group">
 							<div class="col-md-3">
-								<label for="title" {{ $errors->has('title') ? ' has-error' : '' }}>Name:</label>
+								<label for="title" {{ $errors->has('title') ? ' has-error' : '' }}>Title:</label>
 							</div>
 							<div class="col-md-9">
-								<input type="text" class="form-control" id="title" placeholder="Enter Name" name="title" value="{{old('title')}}" required>
+								<input type="text" class="form-control" id="title" placeholder="Enter Title" name="title" value="{{old('title')}}" required>
 								@if ($errors->has('title'))
 									<span class="help-block" style="color: #cc0000">
 										<strong> * {{ $errors->first('title') }}</strong>
@@ -60,10 +60,23 @@
 								<label for="image" {{ $errors->has('image') ? ' has-error' : '' }}>image:</label>
 							</div>
 							<div class="col-md-9">
-								<input type="text" class="form-control" id="image" placeholder="Enter Name" name="image" value="{{old('image')}}" required>
+								<input type="file" name="image[]" class="form-control" id="image" multiple>
 								@if ($errors->has('image'))
 									<span class="help-block" style="color: #cc0000">
 										<strong> * {{ $errors->first('image') }}</strong>
+									</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="display_order" {{ $errors->has('display_order') ? ' has-error' : '' }}>display_order:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="number" class="form-control" id="display_order" placeholder="Enter Name" name="display_order" value="{{old('display_order')}}" required>
+								@if ($errors->has('display_order'))
+									<span class="help-block" style="color: #cc0000">
+										<strong> * {{ $errors->first('display_order') }}</strong>
 									</span>
 								@endif
 							</div>

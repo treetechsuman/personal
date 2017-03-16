@@ -12,6 +12,7 @@ class Experience extends Model{
 				'description',
 				'from',
 				'to',
+				'display_order',
 				'status',
 			];
 	protected $hidden=[

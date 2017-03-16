@@ -18,15 +18,87 @@
 						{!! csrf_field() !!}
 						<div class="form-group">
 							<div class="col-md-3">
-								<label for="name" {{ $errors->has('name') ? ' has-error' : '' }}>Name:</label>
+								<label for="title" {{ $errors->has('title') ? ' has-error' : '' }}>title:</label>
 							</div>
 							<div class="col-md-9">
-								<input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" value="{{$portfolio['name']}}" required>
-								@if ($errors->has('name'))
+								<input type="text" class="form-control" id="title" placeholder="Enter title" name="title" value="{{$portfolio['title']}}" required>
+								@if ($errors->has('title'))
 									<span class="help-block" style="color: #cc0000">
-										<strong> * {{ $errors->first('name') }}</strong>
+										<strong> * {{ $errors->first('title') }}</strong>
 									</span>
 								@endif
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="description" {{ $errors->has('description') ? ' has-error' : '' }}>Description:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" class="form-control" id="description" placeholder="Enter Name" name="description" value="{{$portfolio['description']}}" required>
+								@if ($errors->has('description'))
+									<span class="help-block" style="color: #cc0000">
+										<strong> * {{ $errors->first('description') }}</strong>
+									</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="url" {{ $errors->has('url') ? ' has-error' : '' }}>Url:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" class="form-control" id="url" placeholder="Enter Name" name="url" value="{{$portfolio['url']}}" required>
+								@if ($errors->has('url'))
+									<span class="help-block" style="color: #cc0000">
+										<strong> * {{ $errors->first('url') }}</strong>
+									</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="image" {{ $errors->has('image') ? ' has-error' : '' }}>Change image:</label>
+							</div>
+							<div class="col-md-9">
+								<img src="{{asset($portfolio['image'])}}" class="img-responsive">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="image" {{ $errors->has('image') ? ' has-error' : '' }}>Change image:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="file" name="image[]" class="form-control" id="image" multiple>
+								@if ($errors->has('image'))
+									<span class="help-block" style="color: #cc0000">
+										<strong> * {{ $errors->first('image') }}</strong>
+									</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="display_order" {{ $errors->has('display_order') ? ' has-error' : '' }}>display_order:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="number" class="form-control" id="display_order" placeholder="Enter Name" name="display_order" value="{{$portfolio['display_order']}}" required>
+								@if ($errors->has('display_order'))
+									<span class="help-block" style="color: #cc0000">
+										<strong> * {{ $errors->first('display_order') }}</strong>
+									</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="status" {{ $errors->has('status') ? ' has-error' : '' }}>Status:</label>
+							</div>
+							<div class="col-md-9">
+								<select name="status" class="form-control" id="status">
+									<option value="active">Active</option>
+									<option value="inactive">InActive</option>
+								</select>
 							</div>
 						</div>
 						<div class="box-footer">

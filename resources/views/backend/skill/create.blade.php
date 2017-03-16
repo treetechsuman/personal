@@ -31,7 +31,7 @@
 						</div>
 						<div class="form-group">
 							<div class="col-md-3">
-								<label for="value" {{ $errors->has('value') ? ' has-error' : '' }}>value:</label>
+								<label for="value" {{ $errors->has('value') ? ' has-error' : '' }}>value</label>
 							</div>
 							<div class="col-md-9">
 								<input type="number" class="form-control" id="value" placeholder="Enter value" name="value" value="{{old('value')}}" required>
@@ -51,6 +51,19 @@
 									<option value="skill">Skill</option>
 									<option value="moreSkill">More Skill</option>
 								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="display_order" {{ $errors->has('display_order') ? ' has-error' : '' }}>display_order:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="number" class="form-control" id="display_order" placeholder="Enter Name" name="display_order" value="{{old('display_order')}}" required>
+								@if ($errors->has('display_order'))
+									<span class="help-block" style="color: #cc0000">
+										<strong> * {{ $errors->first('display_order') }}</strong>
+									</span>
+								@endif
 							</div>
 						</div>
 						<div class="form-group">

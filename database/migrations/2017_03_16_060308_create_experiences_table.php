@@ -18,6 +18,7 @@ class CreateExperiencesTable extends Migration {
 			$table->string('description');
 			$table->string('from');
 			$table->string('to');
+			$table->integer('display_order');
 			$table->enum('status',['active','inactive']);
 			$table->timestamps();
 		});

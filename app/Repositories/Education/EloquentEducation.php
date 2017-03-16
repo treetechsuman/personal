@@ -10,7 +10,7 @@ class EloquentEducation implements EducationRepository{
 		$this->education = $education;
 	}
 	public function getAllEducation(){
-		return $this->education->all();
+		return $this->education->all()->sortBy('display_order');;
 	}
 
 	public function getEducationById($id){

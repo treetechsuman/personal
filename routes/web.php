@@ -11,13 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 /*
 |--------------------------------------------------------------------------
 | Dashboard Routes
@@ -34,7 +29,7 @@ Route::group(['prefix' => 'admin'], function() {
 */
 Route::get('/', 'FrontendPageController@index'); 
 Route::get('/home', 'FrontendPageController@index'); 
-Route::get('/about', 'FrontendPageController@about'); 
+//Route::get('/about', 'FrontendPageController@about'); 
 /*
 |--------------------------------------------------------------------------
 | Education Routes

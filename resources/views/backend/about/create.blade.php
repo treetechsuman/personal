@@ -118,6 +118,7 @@
 								@endif
 							</div>
 						</div>
+						
 						<div class="box-footer">
 							<button type="submit" class="btn btn-primary btn-flat btn-sm">Submit</button>
 						</div>

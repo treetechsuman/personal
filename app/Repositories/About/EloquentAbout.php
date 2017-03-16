@@ -12,6 +12,9 @@ class EloquentAbout implements AboutRepository{
 	public function getAllAbout(){
 		return $this->about->all();
 	}
+	public function getAbout(){
+		return $this->about->first();
+	}
 
 	public function getAboutById($id){
 		return $this->about->findorfail($id);

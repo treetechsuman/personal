@@ -10,7 +10,7 @@ class EloquentExperience implements ExperienceRepository{
 		$this->experience = $experience;
 	}
 	public function getAllExperience(){
-		return $this->experience->all();
+		return $this->experience->all()->sortBy('display_order');
 	}
 
 	public function getExperienceById($id){

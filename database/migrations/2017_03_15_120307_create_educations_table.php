@@ -19,6 +19,7 @@ class CreateEducationsTable extends Migration {
 			$table->string('start');
 			$table->string('end');
 			$table->string('description');
+			$table->integer('display_order');
 			$table->enum('status',['active','inactive']);
 			$table->timestamps();
 		});

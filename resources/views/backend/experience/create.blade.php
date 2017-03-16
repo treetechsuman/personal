@@ -83,6 +83,19 @@
 						</div>
 						<div class="form-group">
 							<div class="col-md-3">
+								<label for="display_order" {{ $errors->has('display_order') ? ' has-error' : '' }}>display_order:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="number" class="form-control" id="display_order" placeholder="Enter Name" name="display_order" value="{{old('display_order')}}" required>
+								@if ($errors->has('display_order'))
+									<span class="help-block" style="color: #cc0000">
+										<strong> * {{ $errors->first('display_order') }}</strong>
+									</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-3">
 								<label for="status" {{ $errors->has('status') ? ' has-error' : '' }}>Status:</label>
 							</div>
 							<div class="col-md-9">

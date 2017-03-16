@@ -11,6 +11,7 @@ class Portfolio extends Model{
 				'description',
 				'image',
 				'url',
+				'display_order',
 				'status',
 			];
 	protected $hidden=[

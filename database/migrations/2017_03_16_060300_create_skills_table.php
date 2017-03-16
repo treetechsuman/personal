@@ -16,6 +16,7 @@ class CreateSkillsTable extends Migration {
 			$table->string('title');
 			$table->integer('value');
 			$table->enum('type',['skill','moreSkill']);
+			$table->integer('display_order');
 			$table->enum('status',['active','inactive']);
 			$table->timestamps();
 		});
