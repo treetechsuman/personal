@@ -19,6 +19,9 @@ class AppServiceProvider extends ServiceProvider
         $this->registerSkillRepository();
         $this->registerPortfolioRepository();
         $this->registerAboutRepository();
+        $this->registerMessageRepository();
+        $this->registerSlideRepository();
+        $this->registerSocialRepository();
     }
 
     /**
@@ -63,6 +66,27 @@ class AppServiceProvider extends ServiceProvider
 		return $this->app->bind(
 			'App\\Repositories\\About\\AboutRepository',
 			'App\\Repositories\\About\\EloquentAbout'
+		);
+	}
+
+	public function registerMessageRepository() {
+		return $this->app->bind(
+			'App\\Repositories\\Message\\MessageRepository',
+			'App\\Repositories\\Message\\EloquentMessage'
+		);
+	}
+
+	public function registerSlideRepository() {
+		return $this->app->bind(
+			'App\\Repositories\\Slide\\SlideRepository',
+			'App\\Repositories\\Slide\\EloquentSlide'
+		);
+	}
+
+	public function registerSocialRepository() {
+		return $this->app->bind(
+			'App\\Repositories\\Social\\SocialRepository',
+			'App\\Repositories\\Social\\EloquentSocial'
 		);
 	}
 }

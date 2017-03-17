@@ -29,7 +29,7 @@ Route::group(['prefix' => 'admin'], function() {
 */
 Route::get('/', 'FrontendPageController@index'); 
 Route::get('/home', 'FrontendPageController@index'); 
-//Route::get('/about', 'FrontendPageController@about'); 
+Route::get('/blogs', 'FrontendPageController@blog'); 
 /*
 |--------------------------------------------------------------------------
 | Education Routes
@@ -108,5 +108,53 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::get('/{id}','About\AboutController@show');
 		Route::post('/update/{id}','About\AboutController@update');
 		Route::get('/delete/{id}','About\AboutController@delete');
+	}); 
+}); 
+/*
+|--------------------------------------------------------------------------
+| Message Routes
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix' => 'admin'], function() { 
+	Route::group(['prefix' => 'message'], function() { 
+		Route::get('/','Message\MessageController@index');
+		Route::get('/create','Message\MessageController@create');
+		Route::post('/store','Message\MessageController@store');
+		Route::get('/{id}/edit','Message\MessageController@edit');
+		Route::get('/{id}','Message\MessageController@show');
+		Route::post('/update/{id}','Message\MessageController@update');
+		Route::get('/delete/{id}','Message\MessageController@delete');
+	}); 
+}); 
+/*
+|--------------------------------------------------------------------------
+| Slide Routes
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix' => 'admin'], function() { 
+	Route::group(['prefix' => 'slide'], function() { 
+		Route::get('/','Slide\SlideController@index');
+		Route::get('/create','Slide\SlideController@create');
+		Route::post('/store','Slide\SlideController@store');
+		Route::get('/{id}/edit','Slide\SlideController@edit');
+		Route::get('/{id}','Slide\SlideController@show');
+		Route::post('/update/{id}','Slide\SlideController@update');
+		Route::get('/delete/{id}','Slide\SlideController@delete');
+	}); 
+}); 
+/*
+|--------------------------------------------------------------------------
+| Social Routes
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix' => 'admin'], function() { 
+	Route::group(['prefix' => 'social'], function() { 
+		Route::get('/','Social\SocialController@index');
+		Route::get('/create','Social\SocialController@create');
+		Route::post('/store','Social\SocialController@store');
+		Route::get('/{id}/edit','Social\SocialController@edit');
+		Route::get('/{id}','Social\SocialController@show');
+		Route::post('/update/{id}','Social\SocialController@update');
+		Route::get('/delete/{id}','Social\SocialController@delete');
 	}); 
 }); 

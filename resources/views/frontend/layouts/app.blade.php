@@ -44,7 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<span class="icon-bar"></span>
 							</button>
 							<div class="logo">
-								<h1><a class="navbar-brand" href="index.html"><div class="logo">Er. Suman Dahal </div></a></h1>
+								<h3><a class="navbar-brand" href="index.html"><div class="logo">Er. Suman Dahal </div></a></h3>
 							</div>
 						</div>
 						<!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,6 +57,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<li><a href="#education" class="scroll hvr-bounce-to-bottom">Skills</a></li>
 									<li><a href="#portfolio" class="scroll hvr-bounce-to-bottom">Portfolio</a></li>
 									<li><a href="#mail" class="scroll hvr-bounce-to-bottom">Contact</a></li>
+									<li><a href="{{url('blogs')}}" >Blog</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -72,26 +73,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<span>{{$about['job_title']}}</span>
 				<div class="callbacks_container">
 					<ul class="rslides" id="slider3">
+						@foreach($slides as $slide)
 						<li>
 							<div class="slider-info">
-								<p>PHP Mysql. </p>
+								<p>{{$slide['content']}} </p>
 							</div>
 						</li>
-						<li>
-							<div class="slider-info">
-								<p>html, css, javascript,Java ,jQuery</p>
-							</div>
-						</li>
-						<li>
-							<div class="slider-info">
-								<p>Laravel </p>
-							</div>
-						</li>
+						@endforeach
+						
 					</ul>
 					<div class="clearfix"></div>
 				</div>
 				<!--//Slider-->
 				<ul class="top-links">
+					@foreach($socials as $social)
+						<li><a href="{{$social['link']}}">{!!$social['icon']!!}</a></li>
+					@endforeach
 					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>

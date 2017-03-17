@@ -28,3 +28,21 @@
 		<i class="fa fa-dashboard"></i> <span>About</span>
 	</a>
 </li>
+
+<li class="treeview">
+	<a href="{{url('admin/message')}}">
+		<i class="fa fa-dashboard"></i> <span>Message</span>
+	</a>
+</li>
+
+<li class="treeview">
+	<a href="{{url('admin/slide')}}">
+		<i class="fa fa-dashboard"></i> <span>Slide</span>
+	</a>
+</li>
+
+<li class="treeview">
+	<a href="{{url('admin/social')}}">
+		<i class="fa fa-dashboard"></i> <span>Social</span>
+	</a>
+</li>

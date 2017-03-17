@@ -4,3 +4,6 @@ $this->registerExperienceRepository();
 $this->registerSkillRepository();
 $this->registerPortfolioRepository();
 $this->registerAboutRepository();
+$this->registerMessageRepository();
+$this->registerSlideRepository();
+$this->registerSocialRepository();
