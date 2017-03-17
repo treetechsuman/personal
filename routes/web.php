@@ -28,8 +28,9 @@ Route::group(['prefix' => 'admin'], function() {
 |--------------------------------------------------------------------------
 */
 Route::get('/', 'FrontendPageController@index'); 
-Route::get('/home', 'FrontendPageController@index'); 
-Route::get('/blogs', 'FrontendPageController@blog'); 
+Route::get('/home', 'FrontendPageController@index');
+Route::get('/register', 'FrontendPageController@index');  
+//Route::get('/blogs', 'FrontendPageController@blog'); 
 /*
 |--------------------------------------------------------------------------
 | Education Routes

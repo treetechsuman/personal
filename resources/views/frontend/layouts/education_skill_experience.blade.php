@@ -10,7 +10,7 @@
 				</div>
 				<div class="education-agile-w3l-info">
 					<h4>{{$education['university']}}</h4>
-					<p>{{$education['description']}}</p>
+					<p>{{$education['institute']}}</p>
 					
 				</div>
 				<div class="clearfix"></div>
@@ -39,7 +39,7 @@
 		<div class="skill-agile">
 			@foreach($moreSkills as $moreSkill)
 			<div class="col-sm-4 abt-gd-left text-center">
-				<div id="demo-pie-1" class="pie-title-center" data-percent="{{$moreSkill['value']}}"> <span class="pie-value"></span> </div>
+				<div id="demo-pie-{{$moreSkill['display_order']}}" class="pie-title-center" data-percent="{{$moreSkill['value']}}"> <span class="pie-value"></span> </div>
 				<h4>{{$moreSkill['title']}}</h4>
 			</div>
 			@endforeach

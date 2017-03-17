@@ -44,7 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<span class="icon-bar"></span>
 							</button>
 							<div class="logo">
-								<h3><a class="navbar-brand" href="index.html"><div class="logo">Er. Suman Dahal </div></a></h3>
+								<h3><a class="navbar-brand" href="{{url('/')}}"><div class="logo">Er. Suman Dahal </div></a></h3>
 							</div>
 						</div>
 						<!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,7 +57,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<li><a href="#education" class="scroll hvr-bounce-to-bottom">Skills</a></li>
 									<li><a href="#portfolio" class="scroll hvr-bounce-to-bottom">Portfolio</a></li>
 									<li><a href="#mail" class="scroll hvr-bounce-to-bottom">Contact</a></li>
-									<li><a href="{{url('blogs')}}" >Blog</a></li>
+									<!-- <li><a href="#" >Blog</a></li> -->
 								</ul>
 							</nav>
 						</div>
@@ -272,43 +272,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script src="{{asset('front-themes/js/pie-chart.js')}}" type="text/javascript"></script>
 	<script type="text/javascript">
 	$(document).ready(function () {
-	$('#demo-pie-1').pieChart({
-	barColor: '#44c7f4',
-	trackColor: '#fff',
-	lineCap: 'round',
-	lineWidth: 8,
-	onStep: function (from, to, percent) {
-	$(this.element).find('.pie-value').text(Math.round(percent) + '%');
-	}
-	});
-	$('#demo-pie-2').pieChart({
-	barColor: '#44c7f4',
-	trackColor: '#fff',
-	lineCap: 'butt',
-	lineWidth: 8,
-	onStep: function (from, to, percent) {
-	$(this.element).find('.pie-value').text(Math.round(percent) + '%');
-	}
-	});
-	$('#demo-pie-3').pieChart({
-	barColor: '#44c7f4',
-	trackColor: '#fff',
-	lineCap: 'square',
-	lineWidth: 8,
-	onStep: function (from, to, percent) {
-	$(this.element).find('.pie-value').text(Math.round(percent) + '%');
-	}
-	});
-				
-				$('#demo-pie-4').pieChart({
-	barColor: '#44c7f4',
-	trackColor: '#fff',
-	lineCap: 'square',
-	lineWidth: 8,
-	onStep: function (from, to, percent) {
-	$(this.element).find('.pie-value').text(Math.round(percent) + '%');
-	}
-	});
+		<?php foreach($moreSkills as $moreSkill) {?>
+			//var mydata=;
+		$(<?php echo "'" . "#demo-pie-".$moreSkill['display_order']."'"; ?>).pieChart({
+			barColor: '#44c7f4',
+			trackColor: '#fff',
+			lineCap: 'round',
+			lineWidth: 8,
+			onStep: function (from, to, percent) {
+				$(this.element).find('.pie-value').text(Math.round(percent) + '%');
+			}
+		});
+		<?php } ?>
+	
 	});
 	</script>
 	<!-- skills -->
