@@ -27,7 +27,8 @@ class MessageController extends Controller{
 
 	public function store(Request $request){
 		$this->messageRepo->createMessage($request->all());
-		return redirect('admin/message');
+		//return redirect('admin/message');
+		return back();
 	}
 
 	public function show(){
