@@ -30,10 +30,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</head>
 	
 	<body  data-spy="scroll" data-target=".navbar" data-offset="50" >
+
+	
 		<div class="main" id="home">
+
 			<!-- header -->
 			<div class="w3_navigation navbar-fixed-top " data-spy="affix" data-offset-top="650">
 				<div class="container">
+				@include('backend.layouts.message')
 					<nav class="navbar navbar-default" >
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
@@ -377,5 +381,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 	</script>
 	<!-- //here ends scrolling icon -->
+	<script type="text/javascript">
+    $(".alert").delay(4000).slideUp(200, function() {
+    $(this).alert('close');
+	});
+</script>
 </body>
 </html>

@@ -14,5 +14,4 @@
             {{Session::get('success')}}
         </div>
     @endif
-
 </div>
