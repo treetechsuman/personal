@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Message;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\Message\MessageRepository;
+use Session;
 
 
 class MessageController extends Controller{
@@ -27,7 +28,9 @@ class MessageController extends Controller{
 
 	public function store(Request $request){
 		$this->messageRepo->createMessage($request->all());
-		return redirect('admin/message');
+		Session::flash('success','Thank you for your message');
+		//return redirect('admin/message');
+		return back();
 	}
 
 	public function show(){

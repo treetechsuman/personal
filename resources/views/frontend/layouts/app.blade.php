@@ -30,10 +30,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</head>
 	
 	<body  data-spy="scroll" data-target=".navbar" data-offset="50" >
+
+	
 		<div class="main" id="home">
+
 			<!-- header -->
 			<div class="w3_navigation navbar-fixed-top " data-spy="affix" data-offset-top="650">
 				<div class="container">
+				@include('backend.layouts.message')
 					<nav class="navbar navbar-default" >
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
@@ -188,22 +192,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h3 class="w3l_head w3l_head1">Contact Me</h3>
 			<p class="w3ls_head_para w3ls_head_para1">send Me a message</p>
 			<div class="w3_mail_grids">
-				<form action="#" method="post">
+				<form action="{{url('admin/message/store')}}" method="post">
+					{!! csrf_field() !!}
 					<div class="col-md-6 w3_agile_mail_grid">
 						<span class="input input--ichiro">
-							<input class="input__field input__field--ichiro" type="text" id="input-25" placeholder=" " required="">
+							<input name="name" class="input__field input__field--ichiro" type="text" id="input-25" placeholder=" " required="" >
 							<label class="input__label input__label--ichiro" for="input-25">
 								<span class="input__label-content input__label-content--ichiro">Your Name</span>
 							</label>
 						</span>
 						<span class="input input--ichiro">
-							<input class="input__field input__field--ichiro" type="email" id="input-26" placeholder=" " required="">
+							<input name="email" class="input__field input__field--ichiro" type="email" id="input-26" placeholder=" " required="">
 							<label class="input__label input__label--ichiro" for="input-26">
 								<span class="input__label-content input__label-content--ichiro">Your Email</span>
 							</label>
 						</span>
 						<span class="input input--ichiro">
-							<input class="input__field input__field--ichiro" type="text" id="input-27" placeholder=" " required="">
+							<input name="phone" class="input__field input__field--ichiro" type="text" id="input-27" placeholder=" " required="">
 							<label class="input__label input__label--ichiro" for="input-27">
 								<span class="input__label-content input__label-content--ichiro">Your Phone Number</span>
 							</label>
@@ -211,7 +216,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						
 					</div>
 					<div class="col-md-6 w3_agile_mail_grid">
-						<textarea name="Message" placeholder="Your Message" required=""></textarea>
+						<textarea name="message" placeholder="Your Message" required=""></textarea>
 						<input type="submit" value="Submit">
 					</div>
 					<div class="clearfix"> </div>
@@ -352,5 +357,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 	</script>
 	<!-- //here ends scrolling icon -->
+	<script type="text/javascript">
+    $(".alert").delay(4000).slideUp(200, function() {
+    $(this).alert('close');
+	});
+</script>
 </body>
 </html>
