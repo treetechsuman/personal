@@ -71,6 +71,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<!-- banner -->
 			<div class="banner">
+			<!--skill animation-->
+
+				<div class="mybutton" id="mybtn">
+				  	<a class="scroll" href="#home">My Skills</a>
+				</div>
+				@foreach($skills as $skill)
+				 <div id="skill" class="my go">
+				    {{$skill['title']}}
+				 </div>
+				 @endforeach
+				
+			<!--skill ends-->
 				<!--Slider-->
 				<img src="{{asset('front-themes/images/home_profile.jpg')}}" alt=" " class="img-responsive">
 				<h2>I'M {{$about['name']}}</h2>
@@ -110,6 +122,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="service" id="services">
 		<div class="container my_container">
 			
+
 			<h3 class="w3l_head two">WHAT I DO FOR YOU</h3>
 			<p class="w3ls_head_para">See My Services</p>
 			<div class="service-agileits">
@@ -358,9 +371,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</script>
 	<!-- //here ends scrolling icon -->
 	<script type="text/javascript">
-    $(".alert").delay(4000).slideUp(200, function() {
-    $(this).alert('close');
-	});
-</script>
+	    $(".alert").delay(4000).slideUp(200, function() {
+	    $(this).alert('close');
+		});
+
+		$('#mybtn').click(function(){
+		  //alert('this is clicked');
+		  $('.my').toggleClass("come go");
+		  
+		});
+	</script>
 </body>
 </html>

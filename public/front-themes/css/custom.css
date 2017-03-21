@@ -4,3 +4,69 @@
 
     height: 50px;
 }
+
+.mybutton{
+  height:50px;
+  width:200px;
+  left:43%;
+  position:fixed;
+  color: #ffffff;
+  top: 80px;
+  background-color:#44C7F4;
+  cursor:pointer;
+}
+.mybutton a{
+	color: #ffffff;
+}
+.go{
+  padding:10px;
+  color:#ffffff;
+  height:50px;
+  width:100px;
+  background-color:#44C7F4;
+  border: solid 2px #A90000;
+  left:200px; 
+  z-index:-1;
+  animation-name: go;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.come{
+  padding:10px;
+  color:#ffffff;
+  height:50px;
+  width:100px;
+  background-color:#44C7F4;
+  border: solid 2px #EB5323; 
+  left:200px; 
+  z-index:-1;
+  animation-name: come;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+@keyframes go{
+  0%{ 
+    transform: translateX(0px);
+    transform: rotate(40deg);
+  }
+  25%{
+    transform: translate(100px,100px)
+  }
+  
+  100%{
+    transform: translate(850px,100px);
+    
+ 
+  }
+}
+@keyframes come{
+  0%{ 
+    transform: translate(850px,100px);    
+  }
+  100%{ 
+    transform: translateX(0px);
+    transform: rotate(40deg); 
+  }
+}
