@@ -164,7 +164,7 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
 }
 /*-- //header --*/
 #home {
-    background: url(../images/banner1.jpg) no-repeat center top;
+    background: url(../images/source/sydney-bg.jpg) no-repeat center top;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -172,11 +172,22 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
     -ms-background-size: cover;
        min-height: 715px;
     position: relative;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+    
 }
 .banner {
        margin: 0 auto;
     text-align: center;
     padding-top: 6em;
+
+}
+.banner-overlay{
+  background-color: rgba(0,0,0,0.25);
+  width: 50%;
+  margin-left: 25%;
+  padding: 15px;
 }
 .banner img {
        margin: 0 auto;
@@ -188,11 +199,14 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
     color: #fff;
     margin: 0em 0;
     letter-spacing: 6px;
+    
 }
 .banner span {
-    color: #44c7f4;
+  color: #44c7f4;
 	letter-spacing:4px;
 	font-size:0.9em;
+  padding: 0 5px 0 9px;
+  margin-top:10px;
 }
 .slider-info p {
     font-size:1em;
@@ -224,6 +238,7 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
   position: relative;
   float: left;
   width: 100%;
+  
 }
 .callbacks {
   position: relative;
