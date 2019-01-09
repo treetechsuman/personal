@@ -73,7 +73,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="banner">
 			<!--skill animation-->
 
-				<div class="mybutton" id="mybtn">
+				{{--<div class="mybutton" id="mybtn">
 				  	<a class="scroll" href="#home">My Skills</a>
 				</div>
 				@foreach($skills as $skill)
@@ -81,35 +81,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    {{$skill['title']}}
 				 </div>
 				 @endforeach
+				 --}}
 				
 			<!--skill ends-->
 				<!--Slider-->
 				<img src="{{asset('front-themes/images/home_profile.jpg')}}" alt=" " class="img-responsive">
-				<h2>I'M {{$about['name']}}</h2>
-				<span>{{$about['job_title']}}</span>
-				<div class="callbacks_container">
-					<ul class="rslides" id="slider3">
-						@foreach($slides as $slide)
-						<li>
-							<div class="slider-info">
-								<p>{{$slide['content']}} </p>
-							</div>
-						</li>
+				<div class="banner-overlay">
+					<h2>I'M {{$about['name']}}</h2>
+					<span>{{$about['job_title']}}</span>
+					<div class="callbacks_container">
+						<ul class="rslides" id="slider3">
+							@foreach($slides as $slide)
+							<li>
+								<div class="slider-info">
+									<p>{{$slide['content']}} </p>
+								</div>
+							</li>
+							@endforeach
+							
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+					<!--//Slider-->
+					<ul class="top-links">
+						@foreach($socials as $social)
+							<li><a href="{{$social['link']}}">{!!$social['icon']!!}</a></li>
 						@endforeach
-						
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 					</ul>
-					<div class="clearfix"></div>
 				</div>
-				<!--//Slider-->
-				<ul class="top-links">
-					@foreach($socials as $social)
-						<li><a href="{{$social['link']}}">{!!$social['icon']!!}</a></li>
-					@endforeach
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-				</ul>
 			</div>
 			<!-- //banner -->
 		</div>
@@ -130,7 +133,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-4 list-gds text-center">
 					<i class="fa fa-cog" aria-hidden="true"></i>
 					<h4>WHY CHOOSE Me.</h4>
-					<p>I use web technologies to solve real life problems while trying to contribute to make society better.</p>
+					<p>I use web technologies to solve real life problems.</p>
 				</div>
 				<div class="col-md-4 list-gds text-center">
 					<i class="fa fa-laptop" aria-hidden="true"></i>
@@ -140,7 +143,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-4 list-gds text-center">
 					<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 					<h4>My MISSION.</h4>
-					<p>Develop product for all</p>
+					<p>Develop product to meet business requirement</p>
 				</div>
 				<div class="clearfix"></div>
 				
@@ -281,7 +284,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		</div>
 		<div class="w3l_footer_pos">
-			<p>© 2016 Suman Dahal. All Rights Reserved | Design by <a href="#">Me</a></p>
+			<p>© 2016 Suman Dahal. All Rights Reserved</p>
 		</div>
 	</div>
 	<!-- //footer -->
@@ -379,6 +382,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		  //alert('this is clicked');
 		  $('.my').toggleClass("come go");
 		  
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  $(".navbar-nav li a").click(function(event) {
+		    $(".navbar-collapse").collapse('hide');
+		  });
 		});
 	</script>
 </body>

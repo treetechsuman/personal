@@ -72,14 +72,14 @@ class EloquentPortfolio implements PortfolioRepository{
 			$destinationPath= 'uploads/image/portfolio/';
 			$file->move($destinationPath,$filename);
 			Image::make($destinationPath.$filename)
-                ->resize( 400, 500 )//note width x height		
-                ->text('Suman',100,100,function($font) {
+                ->resize( 1020, 592 )//note width x height		
+                /*->text('Suman',100,100,function($font) {
 								    $font->size(200);
 								    $font->color(array(255, 255, 255, 0.5));
 								    $font->align('center');
 								    $font->valign('top');
 								    $font->angle(45);
-								})
+								})*/
                 ->save($destinationPath.$filename);    	
     	}
     	return $destinationPath.$filename;

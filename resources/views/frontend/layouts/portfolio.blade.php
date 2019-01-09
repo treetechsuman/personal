@@ -4,7 +4,7 @@
 		<p class="w3ls_head_para">See My Works</p>
 		<div class="agileits_portfolio_grids">
 			@foreach($portfolios as $portfolio)
-			<div class="col-md-4 agileits_portfolio_grid">
+			<div class="col-md-6 agileits_portfolio_grid">
 				<div class="agileinfo_portfolio_grid hovereffect">
 					<a class="cm-overlay" href="{{asset($portfolio['image'])}}">
 						<img src="{{asset($portfolio['image'])}}" alt=" " class="thumbnail img-responsive">

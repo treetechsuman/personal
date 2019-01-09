@@ -183,12 +183,25 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
     padding-top: 6em;
 
 }
+
 .banner-overlay{
   background-color: rgba(0,0,0,0.25);
   width: 50%;
   margin-left: 25%;
   padding: 15px;
 }
+@media (max-width: 640px){
+  .banner-overlay{
+    background-color: rgba(0,0,0,0.25);
+    width: 90%;
+    margin-left: 5%;
+    padding: 15px;
+  }
+  .banner img {
+    margin-top: 46px !important;
+  }
+}
+
 .banner img {
        margin: 0 auto;
     text-align: center;
@@ -430,6 +443,9 @@ ul.top-links li a i.fa:hover {
     padding: 4em 0;
 
 }
+.education-agile-w3l {
+    margin-top: 20px;
+}
 .my_container{
     padding-top: 20px;
 }
@@ -478,6 +494,7 @@ p.w3ls_head_para {
   display: inline-block;
   position: relative;
   text-align: center;
+  margin-top: 25px;
 }
 h3.tittle:after, h3.tittle:before {
     border: 4px double #c2c2c2;
@@ -497,7 +514,7 @@ h3.tittle:after, h3.tittle:before {
     color: #eb5424;
 }
 .abt-gd-left h4 {
-    margin-top: 40px;
+    margin-top: 5px;
     color: #10A7AF;
     font-weight: 100;
     font-size: 22px;
@@ -634,7 +651,7 @@ p.b_label {
     font-size: 0.9em;
     line-height: 1.9em;
     color: #777;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 .education-agile-w3l.two {
     margin: 1em 0;

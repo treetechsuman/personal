@@ -48,8 +48,8 @@
 							</div>
 							<div class="col-md-9">
 								<select name="type" class="form-control" id="type">
-									<option value="skill">Skill</option>
-									<option value="moreSkill">More Skill</option>
+									<option value="skill" @if($skill['type']=='skill') selected="selected"  @endif>Skill</option>
+									<option value="moreSkill" @if($skill['type']=='moreSkill') selected="selected" @endif >More Skill</option>
 								</select>
 							</div>
 						</div>

@@ -12,6 +12,25 @@
 */
 
 Auth::routes();
+/*
+|--------------------------------------------------------------------------
+| Setup Routes
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix' => 'setup'], function() { 
+	Route::get('/cache-clear', function(){ 
+		\Artisan::call('cache:clear');
+		echo 'cache-clear complete';
+	});
+	Route::get('/config-cache', function(){ 
+		\Artisan::call('config:cache');
+		echo 'config-cache complete';
+	});
+	Route::get('/dump-autoload', function(){ 
+		exec('composer dump-autoload');
+		echo 'composer dump-autoload complete';
+	});
+}); 
 
 /*
 |--------------------------------------------------------------------------
